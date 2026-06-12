@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Club Français - The Ultimate Club Experience</title>
+    <style>
+        :root {
+            --france-blue: #002395;
+            --france-white: #FFFFFF;
+            --france-red: #ED2939;
+            --light-bg: #F4F6F9;
+            --dark-text: #2C3E50;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--dark-text);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--france-blue) 33%, rgba(255,255,255,0.9) 33%, rgba(255,255,255,0.9) 66%, var(--france-red) 66%);
+            color: var(--dark-text);
+            padding: 4rem 2rem;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            background: rgba(255, 255, 255, 0.95);
+            display: inline-block;
+            padding: 2rem 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            color: var(--france-blue);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--france-red);
+            font-weight: bold;
+        }
+
+        nav {
+            background-color: var(--dark-text);
+            padding: 1rem;
+            text-align: center;
+            sticky: top;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--france-red);
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: var(--france-blue);
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--france-red);
+            margin: 0.5rem auto 0;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--france-blue);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card:nth-child(even) {
+            border-top-color: var(--france-red);
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--dark-text);
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .cta-section {
+            background-color: var(--france-blue);
+            color: white;
+            padding: 3rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .cta-section h2 {
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        .cta-section p {
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--france-red);
+            color: white;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background 0.3s ease, transform 0.2s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #c21e2b;
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: var(--dark-text);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            .header-content { padding: 1.5rem; }
+            nav a { display: block; margin: 0.5rem 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <h1>Le Club Français</h1>
+            <p>Where Passion Meets Culture, Language, and Art</p>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#why-us">Why French Club?</a>
+        <a href="#perks">Club Perks</a>
+        <a href="#join">Join the Experience</a>
+    </nav>
+
+    <main>
+        <section id="why-us">
+            <h2 class="section-title">Why It's the Best Club on Campus</h2>
+            <div class="grid-container">
+                <div class="card">
+                    <h3>🌍 Global Connectivity</h3>
+                    <p>French is spoken across five continents by over 300 million people. Joining our club connects you to a massive international network of speakers, career opportunities, and diplomatic pathways.</p>
+                </div>
+                <div class="card">
+                    <h3>🍷 Unmatched Gastronomy</h3>
+                    <p>Forget standard club snacks. We host authentic crêpe-making nights, cheese tastings, and pastry workshops. Discover why French cuisine is recognized as an elite cultural heritage.</p>
+                </div>
+                <div class="card">
+                    <h3>🎬 Elite Arts & Cinema</h3>
+                    <p>From the timeless waves of the French New Wave cinema to modern masterpieces, we break down iconic films, literature, and philosophy without the pressure of an academic classroom.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="perks">
+            <h2 class="section-title">What You'll Experience</h2>
+            <div class="grid-container">
+                <div class="card">
+                    <h3>Café & Conversation</h3>
+                    <p>Low-pressure, casual speech circles tailored for absolute beginners and fluent speakers alike. Build practical confidence over warm drinks.</p>
+                </div>
+                <div class="card">
+                    <h3>Cultural Excursions</h3>
+                    <p>We host museum gallery crawls, theater visits, and culinary outings designed to immerse you directly in Francophone history and modern design.</p>
+                </div>
+                <div class="card">
+                    <h3>Career Accelerators</h3>
+                    <p>Unlock access to exclusive resume workshops, networking events with international companies, and insight into global exchange programs.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="join" class="cta-section">
+            <h2>Prêt à nous rejoindre?</h2>
+            <p>Ready to experience the finest culture, language mastery, and community? Sign up today to secure your spot for our next tasting and orientation evening.</p>
+            <button class="btn" onclick="alert('Merci! Welcome to Le Club Français! Check your email for orientation details.')">Join Le Club Today</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Le Club Français. Devoted to Culture, Language, and Community. Built for Enthusiasts Everywhere.</p>
+    </footer>
+
+</body>
+</html>
